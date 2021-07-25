@@ -1,32 +1,37 @@
 {
-  "expo": {
-    "name": "expo-location-repro",
-    "slug": "expo-location-repro",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "expo": {
+        "name": "expo-location-repro",
+        "slug": "expo-location-repro",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": ["**/*"],
+        "ios": {
+            "supportsTablet": true,
+            "infoPlist": {
+                "NSLocationAlwaysAndWhenInUseUsageDescription": "We use your location to show our customers how close their packages are to being delivered.",
+                "NSLocationAlwaysUsageDescription": "We use your location to show our customers how close their packages are to being delivered.",
+                "NSLocationWhenInUseUsageDescription": "We use your location to show our customers how close their packages are to being delivered.",
+                "UIBackgroundModes": ["location"]
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#FFFFFF"
+            },
+            "permissions": ["ACCESS_BACKGROUND_LOCATION"]
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        }
     }
-  }
 }
